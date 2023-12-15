@@ -4,7 +4,8 @@ In order to create this software 2 options (maybe more) are available out of the
 
 ### Dev. Environment.
 Two servers will be created, one for the user interface and other to create a websocket connections with the first one in order to send the simulated data.
-![[system_design.png]]
+![screenshot](./Images/system_design.png)
+
 Bun. a complete toolkit for building, running, testing javascript and typescript. uses ES modules. Bun for our use case is a drop in replacement for NodeJS, the most relevant aspect here is it's speed, in average, Bun 1.0 is  4 times faster than NodeJS 20.x
 Bun even when it's not 100% compatible with Nodejs, by design, is faster and uses less resources, as we are using bun from the start no retro compatibility is required.
 
@@ -23,7 +24,7 @@ In I7 dual core (macbook pro early 2015), executing 5 clients at the same time, 
 
 For this test the server has been configured to send data (a random number) every 20 ms.
 
-![screenshot](./images/cpu-test1.png)
+![screenshot](./Images/cpu-test1.png)
 
 Interesting fact: Clients executed form the console were running at 2.7 to 3.1%, one client running inside postman were consuming 40.5%.
 
@@ -33,7 +34,7 @@ The test was sustained for 20 mins, no incidents or drop connections were regist
 
 The same test but execute at 5ms of interval showed an increment of 2% in CPU consumption in average for all the clients and the Websocket server at the beginning but after some time (1 min approx) the consumption was stabilised  at 1.3 to 1.6 for the shell clients and 4.6 for the Websocket server.
 
-![[cpu-test2.png]]
+![screenshot](./Images/cpu-test2.png)
 
 Finally:
 The websocket server in idle state consumes 2.1 - 2.6% CPU and approx. 20Mb of RAM.
@@ -112,10 +113,11 @@ There is no definition for the Green segment, we will consider that measurements
 ### About the Errors
 Due the ranges defined to generate de data, it's normal to have almost green all the time if the error simulated is below 5% then a lot of controls will be OK,
 If the error simulated goes to is low which is normal as we can see in this image
-![[ui-green.png.png]]
+![screenshot](./Images/ui-green.png)
+
 
 with an error margin in 9% we start getting warnings for some features:
-![[ui-green-yellow.png.png]]
+![screenshot](./Images/ui-green-yellow.png)
 
 ### Why js and ts files?
 As I was reading the docs for Bun, I found that this transpiler can work with native js but with ts also, so I tested this last option in the backend server  (index.ts)
