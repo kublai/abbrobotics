@@ -1,0 +1,42 @@
+<mxfile host="app.diagrams.net" modified="2023-12-15T21:06:53.455Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="2uQTdsasTJzIxmbY-1p3" version="22.1.11" type="device">
+  <diagram name="Page-1" id="kNJV68RTTY_WuaCYYHY-">
+    <mxGraphModel dx="1288" dy="1067" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6jMbCbK2E5gqVZjYdeyS-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="6jMbCbK2E5gqVZjYdeyS-1" target="6jMbCbK2E5gqVZjYdeyS-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6jMbCbK2E5gqVZjYdeyS-6" value="Websocket comms" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="6jMbCbK2E5gqVZjYdeyS-5">
+          <mxGeometry x="-0.0571" y="-4" relative="1" as="geometry">
+            <mxPoint x="5" y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6jMbCbK2E5gqVZjYdeyS-1" value="React Web server in NodeJS 20.10&lt;br&gt;&lt;br&gt;Subdomino with SSL&lt;br&gt;https://abb.bytebox.es" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="320" y="200" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="6jMbCbK2E5gqVZjYdeyS-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6jMbCbK2E5gqVZjYdeyS-2" target="6jMbCbK2E5gqVZjYdeyS-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6jMbCbK2E5gqVZjYdeyS-2" value="Javascript server for Websocket connections created win Bun 1.0" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="650" y="200" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="6jMbCbK2E5gqVZjYdeyS-3" value="SQLite&lt;br&gt;Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#6d8764;fontColor=#ffffff;strokeColor=#3A5431;" vertex="1" parent="1">
+          <mxGeometry x="682.5" y="400" width="85" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6jMbCbK2E5gqVZjYdeyS-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6jMbCbK2E5gqVZjYdeyS-7" target="6jMbCbK2E5gqVZjYdeyS-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6jMbCbK2E5gqVZjYdeyS-7" value="Iternet" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="51" y="223.5" width="191" height="103" as="geometry" />
+        </mxCell>
+        <mxCell id="6jMbCbK2E5gqVZjYdeyS-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6jMbCbK2E5gqVZjYdeyS-9" target="6jMbCbK2E5gqVZjYdeyS-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6jMbCbK2E5gqVZjYdeyS-9" value="User" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer.svg;" vertex="1" parent="1">
+          <mxGeometry x="101.7" y="32" width="89.6" height="121.43" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
