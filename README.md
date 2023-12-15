@@ -23,8 +23,7 @@ In I7 dual core (macbook pro early 2015), executing 5 clients at the same time, 
 
 For this test the server has been configured to send data (a random number) every 20 ms.
 
-![[./images/cpu-test1.png]]
-
+![screenshot](./images/cpu-test1.png)
 
 Interesting fact: Clients executed form the console were running at 2.7 to 3.1%, one client running inside postman were consuming 40.5%.
 
