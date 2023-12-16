@@ -111,7 +111,7 @@ genControls.js should be executed only once before starting the node web server.
 
 There is no definition for the Green segment, we will consider that measurements below 10% are ok. (green icon) 
 
-### About the Errors
+### Error detection
 Due the ranges defined to generate de data, it's normal to have almost green all the time if the error simulated is below 5% then a lot of controls will be OK,
 If the error simulated goes to is low which is normal as we can see in this image
 ![screenshot](./Images/ui-green.png)
