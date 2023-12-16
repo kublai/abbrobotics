@@ -4,6 +4,7 @@ In order to create this software 2 options (maybe more) are available out of the
 
 ### Dev. Environment.
 Two servers will be created, one for the user interface and other to create a websocket connections with the first one in order to send the simulated data.
+
 ![screenshot](./Images/system_design.png)
 
 Bun. a complete toolkit for building, running, testing javascript and typescript. uses ES modules. Bun for our use case is a drop in replacement for NodeJS, the most relevant aspect here is it's speed, in average, Bun 1.0 is  4 times faster than NodeJS 20.x
