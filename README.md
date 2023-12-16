@@ -123,6 +123,17 @@ with an error margin in 9% we start getting warnings for some features:
 As I was reading the docs for Bun, I found that this transpiler can work with native js but with ts also, so I tested this last option in the backend server  (index.ts)
 
 ## The web consumer interface
-For this part of the assignement I used a classical React installation with node (version 20.10)
+For this part of the assignement a classical React installation was deployed with node (version 20.10) and just one component (Displayslots) to create all the necessary container on demand. Depending of the number of features the slots are created one for each feature and inside eache component a list (in a table) with all the controls for the feature. The same component create different 3 sizes (standard, medium, big)
+
+## The Data generation server
+Ths data generation service has been called as daemon (in the PROD) server to ensure its operation even when the connection fails.
+
+```
+daemon --name="simserver" --output=lsimserver.txt bun start
+```
+In the development server the script was launched from a terminal in the IDE.
+
+
+
 
 
