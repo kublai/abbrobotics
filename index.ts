@@ -36,8 +36,8 @@ const server = Bun.serve({
         }
       return new Response("Upgrade failed :(", { status: 500 });
     },
-    certFile: "./cert.crt",
-    keyFile: "./cert.key",
+    certFile: process.env.SSL_CERT,
+    keyFile:  process.env.SSL_KEY,
     websocket: {
         open(ws){//when a connection is opened the client starts to receive the data
             console.log("connection opened from " + ws.remoteAddress);
