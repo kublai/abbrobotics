@@ -7,13 +7,14 @@ Two servers will be created, one for the user interface and other to create a we
 
 ![screenshot](./Images/system_design.png)
 
-Bun. a complete toolkit for building, running, testing javascript and typescript. uses ES modules. Bun for our use case is a drop in replacement for NodeJS, the most relevant aspect here is it's speed, in average, Bun 1.0 is  4 times faster than NodeJS 20.x
-Bun even when it's not 100% compatible with Nodejs, by design, is faster and uses less resources, as we are using bun from the start no retro compatibility is required.
+Bun. is a complete toolkit for building, running, testing javascript and typescript. Bun for our use case is a drop in replacement for NodeJS, the most relevant aspect here is it's speed, in average, Bun 1.0 is  4 times faster than NodeJS 20.x
+Bun even when it's not yet 100% compatible with Nodejs, by design, is faster and uses less resources, using bun we can be sure that the system will execute in a modest hardware environment without any performance issues. (some testing has been done to be sure)
 
-Nice thing: Bun supports CommonJS and Modules, no additional config required
-Websockets support: this one for this project maybe the most relevant factor to choose Bun, we can use http connections and ws connections just adding an event handler for websockets inside our http server
+**Nice thing**: Bun supports CommonJS and Modules, no additional config required
+**Websockets support**: this one for this project maybe the most relevant factor to choose Bun, we can use http connections and ws connections just adding an event handler for websockets inside our http server
 
-Bun installation
+##Bun installation
+
 ``` bash
 curl -fsSL https://bun.sh/install | bash
 ```
@@ -21,7 +22,7 @@ curl -fsSL https://bun.sh/install | bash
 Bun installation path: ~/.bun/bin/bun. (version 1.0.17)
 
 ### Server Stress test
-In I7 dual core (macbook pro early 2015), executing 5 clients at the same time, the load on the CPU remains constant at 3% approx. for each client process.
+In a I7 dual core (macbook pro early 2015), executing 5 clients at the same time, the load on the CPU remains constant at 3% approx. for each client process.
 
 For this test the server has been configured to send data (a random number) every 20 ms.
 
