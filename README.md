@@ -127,14 +127,79 @@ As I was reading the docs for Bun, I found that this transpiler can work with na
 ## The web consumer interface
 For this part of the assignement a classical React installation was deployed with node (version 20.10) and just one component (Displayslots) to create all the necessary container on demand. Depending of the number of features the slots are created one for each feature and inside eache component a list (in a table) with all the controls for the feature. The same component create different 3 sizes (standard, medium, big)
 
-## The Data generation server
-Ths data generation service has been called as daemon (in the PROD) server to ensure its operation even when the connection fails.
+## Installation
+
+Download the projects: abbrobotics and abbroboticsui from github.com
+```
+https://github.com/kublai/abbrobotics
+
+https://github.com/kublai/abbroboticsui
+```
+unzip the files and execute the node modules insatallation in both projects
 
 ```
-daemon --name="simserver" --output=lsimserver.txt bun start
+npm install
 ```
-In the development server the script was launched from a terminal in the IDE.
 
+
+### Create the storage database
+if you are in a mac environment, you can execute
+```
+brew install sqlite
+```
+
+create the database in the same directory where the abbrobotics project has been unzipped
+
+```
+sqlite3 abbrobotics.db
+```
+
+create the tables the the system will require:
+```
+CREATE TABLE IF NOT EXISTS parts (
+id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+name TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS features (
+id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+part_id INTEGER NOT NULL,
+name TEXT NOT NULL,
+CONSTRAINT features_FK FOREIGN KEY (part_id) REFERENCES parts(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS controls (
+id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+feature_id INTEGER NOT NULL,
+control text NOT NULL,
+measurement NUMERIC NOT NULL,
+tolerance NUMERIC NOT NULL,
+deviation NUMERIC DEFAULT (0) NOT NULL,
+CONSTRAINT controls_FK FOREIGN KEY (feature_id) REFERENCES features(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+```
+
+Use a database manager to insert some data in the tables parts and features 
+
+Execute the command:
+```
+bun run genControls
+```
+
+This command will generate some dummy data for all the features of your database
+
+Finally to start the server execute
+```
+bun run start
+```
+
+### Starting the web server
+Open a terminal in  the path where the abbroboticsui project has been unzipped and execute:
+```
+npm run dev
+```
+
+A server will start in http://localhost:5173/
 
 
 
