@@ -21,7 +21,7 @@ interface part {
     name: string,
 }
 
-const dataInterval = 5000;
+const dataInterval = process.env.TIMING;
 let partNumber = 1; //default part to show the data associated.
 let timerId:any;
 let counter:number=0;
